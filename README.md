@@ -23,7 +23,7 @@ require("file-logger")("dev.log")
 ```javascript
 2016/07/27-22:16:11 ~: something
 2016/07/27-22:16:11 ~: ReferenceError: err is not defined
-    at Object.<anonymous> (D:\Francesco Cannizzaro\Desktop\Dropbox\Data\projects\kimsufi\af-bot\test.js:9:14)
+    at Object.<anonymous> (path/to/file/test.js:9:14)
     at Module._compile (module.js:541:32)
     at Object.Module._extensions..js (module.js:550:10)
     at Module.load (module.js:458:32)

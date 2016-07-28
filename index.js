@@ -10,14 +10,24 @@ var datelogs = false;
 
 console.log = function() {
 
-    if (datelogs) try {
-        fs.mkdirSync("logs");
-        create("logs/" + moment().format("YYYY-MM-DD") + '.log');
-    } catch (err) {
-        create("logs/" + moment().format("YYYY-MM-DD") + '.log');
+    var format = "YYYY/MM/DD-HH:mm:ss ~: ";
+
+    if (datelogs) {
+
+        // remove day, month , year in this log
+        format = "HH:mm:ss ~: ";
+
+        // check if folder exist
+        try {
+            fs.mkdirSync("logs");
+            create("logs/" + moment().format("YYYY-MM-DD") + '.log');
+        } catch (err) {
+            create("logs/" + moment().format("YYYY-MM-DD") + '.log');
+        }
+
     }
 
-    const time = moment().format("YYYY/MM/DD-HH:mm:ss ~: ");
+    const time = moment().format(format);
     log.write(time + util.format.apply(null, arguments) + '\n');
     process.stdout.write(util.format.apply(null, arguments) + '\n');
 }

@@ -1,6 +1,6 @@
 {
     "name": "file-logger",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Log stdout/stderr to file",
     "main": "index.js",
     "dependencies": {
@@ -14,5 +14,13 @@
         "log"
     ],
     "author": "Francesco Cannizzaro",
-    "license": "MIT"
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/fcannizzaro/file-logger.git"
+    },
+    "bugs": {
+        "url": "https://github.com/fcannizzaro/file-logger/issues"
+    },
+    "homepage": "https://github.com/fcannizzaro/file-logger#readme"
 }

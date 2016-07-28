@@ -7,18 +7,21 @@ Log stdout/stderr to file
 # Usage
 
 ```javascript
-// default = out.log
+
+// use default filename [out.log]
 require("file-logger")()	
 
-// or
-
+// or use custom filename
 require("file-logger")("dev.log")
+
+// or use current date as filename 
+require("file-logger")(true)
 
 // other lines
 // ...
 
 ```
-
+ 
 # Sample
 ```javascript
 2016/07/27-22:16:11 ~: something
@@ -37,3 +40,9 @@ require("file-logger")("dev.log")
 2016/07/27-22:16:15 ~: wait
 2016/07/27-22:16:17 ~: wait
 ```
+
+# Date Logs
+- logs
+    - 2016-07-27.log
+    - 2016-07-28.log
+    - ...
